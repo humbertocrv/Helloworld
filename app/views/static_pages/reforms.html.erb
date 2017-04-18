@@ -1,0 +1,18 @@
+<h1>Ravesoft 1.0</h1>
+<br>
+<p><h2>Consola principal</h2></p>
+<br>
+
+<% if current_user %>
+      
+
+      
+    <br> <br><h2> Reformas de usuario </h2><br>
+
+    <h3>
+   	<%= link_to 'Ver datos de usuario |', "http://localhost:3000/static_pages/profile" %>
+   	<%= link_to 'Ver movimientos de usuario |', "http://localhost:3000/static_pages/movements" %>
+   	<%= link_to 'Ver reformas de usuario', "http://localhost:3000/static_pages/reforms" %>
+   	</h3>
+
+<% end %>

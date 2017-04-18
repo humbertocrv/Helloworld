@@ -1,2 +1,17 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>Ravesoft 1.0</h1>
+<br>
+<p>Aplicación de gestion de clientes</p>
+<br>
+<br>
+
+<% if current_user %>
+      
+
+    <br> <br> Bienvenido <%= current_user.email %>   
+    <br> <br> Consola principal <br>
+
+   	<%= link_to 'Accede a consola de mando', "http://localhost:3000/static_pages/console"  %> <!--Esto se quito del link_to: , method: :post -->
+
+
+
+<% end %>

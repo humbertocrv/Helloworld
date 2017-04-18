@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Helloworld</title>
+    <title>Ravesoft 2.0</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,24 +9,36 @@
   </head>
 
   <body>
+  <center>
+
 
 
 	<% flash.each do |key, value| %>
 	    <div class="alert alert-<%= key %> alert-dismissable">
-	        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+	        <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> -->
+          <font color="grey">
 	        <%= value %>
+          </font>
 	    </div>
 	<% end %>
 
 
    <% if current_user %>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+   
    <% else %>
       <%= link_to 'Login', new_user_session_path %>
    <% end %>
 
+
+
+
+
+
+   <br>
+
     <%= yield %>
 
-    
+  </center>  
   </body>
 </html>
